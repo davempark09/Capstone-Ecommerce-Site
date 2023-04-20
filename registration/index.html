@@ -14,17 +14,19 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
+<body id="body2">
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
-            <a class="navbar-brand" href="/"><img src="/images/logo.png" alt="Gundam Logo" height="40px"
-                    width="120px"></a>
+            <a class="navbar-brand topLogo" href="/">
+                <img src="/images/logo.png" alt="Gundam Logo" height="40px" width="120px">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="toggler">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse navList" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav d-flex justify-content-around navUl">
                     <li class="nav-item active">
                         <a class="nav-link" href="/">Homepage</a>
                     </li>
@@ -45,55 +47,57 @@
         </nav>
     </header>
 
-    <div class="container mt-3">
+    <div class="container mt-5 d-flex justify-content-center">
         <form class="formContainer ">
-            <div class="mb-3 d-flex justify-content-center">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" aria-describedby="username" style="width:300px"
-                    required>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingUser" placeholder="JohnJacobsJingleHeimerSchmit"
+                    style="width:300px" required>
+                <label for=" floatingUser">Username</label>
             </div>
-            <div class="mb-3 d-flex justify-content-center">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" style="width:300px"
-                    required>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingEmail" placeholder="Password"
+                    style="width:300px" required>
+                <label for="floatingEmail">E-mail</label>
             </div>
-            <div class="mb-3 d-flex justify-content-center">
-                <label for="fName" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="fName" aria-describedby="fName" style="width:300px"
-                    required>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingName" placeholder="John Smith" style="width:300px">
+                <label for=" floatingName">Name (Optional)</label>
             </div>
-            <div class="mb-3 d-flex justify-content-center">
-                <label for="lName" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="lName" aria-describedby="lName" style="width:300px"
-                    required>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingBday" placeholder="00/00/00" style="width:300px">
+                <label for=" floatingBday">Birthday (Optional)</label>
             </div>
-            <div class="mb-3 d-flex justify-content-center">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" style="width:300px" required>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword2" placeholder="Password"
+                    style="width:300px" required>
+                <label for="floatingPassword2">Password</label>
             </div>
-            <div class="mb-3 d-flex justify-content-center">
-                <label for="passwordConfirmation" class="form-label">Password Confirmation</label>
-                <input type="password" class="form-control" id="passwordConfirmation" style="width:300px" required>
-            </div>
-            <div class="d-flex justify-content-center align-items-center">
-                <form action="/action_page.php">
-                    <p>How did you hear about us:</p>
-                    <input type="radio" id="social" name="about" value="Social">
-                    <label for="social">Social Media</label><br>
-                    <input type="radio" id="google" name="about" value="Google">
-                    <label for="google">Google</label><br>
-                    <input type="radio" id="family" name="about" value="Family">
-                    <label for="family">Family/Friends</label><br>
-                    <input type="radio" id="other" name="about" value="Other">
-                    <label for="other">Other</label>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword3" placeholder="Password"
+                    style="width:300px" required>
+                <label for="floatingPassword3">Password Confirmation</label>
             </div>
 
 
-            <br><br>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+            <form action="/action_page.php">
+                <p class="labelColor">How did you hear about us:</p>
+                <input type="radio" id="social" name="about" value="Social">
+                <label for="social" class="labelColor">Social Media</label><br>
+                <input type="radio" id="google" name="about" value="Google">
+                <label for="google" class="labelColor">Google</label><br>
+                <input type="radio" id="family" name="about" value="Family">
+                <label for="family" class="labelColor">Family/Friends</label><br>
+                <input type="radio" id="other" name="about" value="Other">
+                <label for="other" class="labelColor">Other</label>
+                <br><br>
+                <div class="btnContainer d-flex justify-content-center mb-3">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+                <a href="/login/" class="link">Already have an account? Log in</a><br>
+            </form>
     </div>
-    <footer class="container-fluid mt-3 bg-light">
+
+    <footer class="container-fluid mt-5 bg-light">
         <div class="row">
             <p class="col-4">@copyright stuff</p>
             <p class="col-4">Socia Media Links</p>
