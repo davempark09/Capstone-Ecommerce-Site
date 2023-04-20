@@ -1,50 +1,81 @@
+/* Setting base margin and padding for everything */
 * {
     margin: 0;
     padding: 0;
 }
 
-table {
-    width: 100%;
-    border: 1px solid grey;
+/* The font used */
+body, header, footer {
+    font-family: 'Open Sans', sans-serif;
 }
+
+/* First page bulleted list styles */
 .liInfo {
     list-style-type: square;
     margin-left: 25px;
     padding-left: 10px;
 }
 
+/* The sample checkout cart styles */
+table {
+    width: 100%;
+    border: 1px solid grey;
+}
+
 .tableHead {
     border-bottom: 1px solid darkgray;
 }
+
 .tableBottom {
     border: 1px solid darkgray;
 }
+
+/* The site navbar logo style */
 .topLogo {
     margin-left: 10px;
 }
+
+/* Styling for the forms used */
 .form-label {
     margin-right: 10px;
 }
+
 .form-check-label {
     margin-left: 10px;
 }
 
-.labelColor {
-    color:palegreen;
-}
-
-.link {
-    color: palegreen;
-    text-decoration: none;
-}
+/* Styling for footer content to be closer  */
 .closer {
     margin-bottom: 0;
 }
+
+/* Expanding the nav container */
 .navUl {
     width: 100%;
 }
 
+/* Styling the text on pages with backgrounds to change from dark to light to be visible */
+.link {
+    color: black;
+    animation: color-change 7s infinite;
+    text-decoration: none;
+}
 
+.labelColor {
+    animation: color-change 7s infinite;
+}
+
+/* The transition of the colors during the animation */
+@keyframes color-change {
+    15% { color: black; }
+    30% { color: grey; }
+    45% { color: darkgray; }
+    70% { color: white; }
+    85% { color: darkgrey; }
+    100% { color: grey; }
+}
+
+/* The styling of the carousel images */
 .myImg {
     border-radius: 5px;
     cursor: pointer;
@@ -58,49 +89,51 @@ table {
     opacity: 0.7;
 }
 
+/* Hover styles for header/navbar */
 .nav-link:hover {
     background-color:grey;
 }
 
+/* Expanding image size on hover */
+.cardImg:hover {
+    transform:scale(1.5);
+}
+
+.cartImg:hover {
+    transform:scale(2.5);
+}
+
+/* The empty space used to position content on login page */
 .spaceHolder {
     height: 15rem;
     visibility: hidden;
 }
-.prodImg:hover {
-    transform:scale(3)
+
+/* Footer text styling */
+.bottomNav {
+    text-decoration: none;
+    color: white;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
-
+/* The background and animation for login page */
 #body1  {
-    background-image: url('/images/Slide6.jpg');
+    background-image: url('/images/slide6.jpg');
     background-size:cover;
-        -webkit-animation: slidein 70s;
         animation: slidein 70s;
-
-        -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
-
-        -webkit-animation-iteration-count: infinite;
         animation-iteration-count: infinite;
-
-        -webkit-animation-direction: alternate;
         animation-direction: alternate;              
 }
 
-@-webkit-keyframes slidein {
-from {background-position: top; background-size:2700px; }
-to {background-position: -100px 0px;background-size:1400px;}
-}
-
+/* The transition of background animation */
 @keyframes slidein {
 from {background-position: top;background-size:2700px; }
 to {background-position: -100px 0px;background-size:1400px;}
-
 }
 
+/* The static background used */
 #body2  {
-    background-image: url('/images/Slide7.jpg');
+    background-image: url('/images/slide7.jpg');
     background-size:cover;
 }
 

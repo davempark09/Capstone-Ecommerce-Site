@@ -11,15 +11,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/87acc4b737.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
 </head>
 
 <body id="body2">
 
+    <!-- The top navigation bar  -->
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <a class="navbar-brand topLogo" href="/">
-                <img src="/images/logo.png" alt="Gundam Logo" height="40px" width="120px">
+                <img src="/images/logo.png" alt="Gundam Logo" height="40" width="120">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="toggler">
@@ -47,61 +52,76 @@
         </nav>
     </header>
 
+    <!-- The information form to register -->
     <div class="container mt-5 d-flex justify-content-center">
         <form class="formContainer ">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingUser" placeholder="JohnJacobsJingleHeimerSchmit"
-                    style="width:300px" required>
-                <label for=" floatingUser">Username</label>
+                    style="width:300px" minlength="3" maxlength="25" required>
+                <label for="floatingUser">Username</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="password" class="form-control" id="floatingEmail" placeholder="Password"
-                    style="width:300px" required>
+                    style="width:300px" minlength="3" maxlength="35" required>
                 <label for="floatingEmail">E-mail</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingName" placeholder="John Smith" style="width:300px">
-                <label for=" floatingName">Name (Optional)</label>
+                <label for="floatingName">Name (Optional)</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingBday" placeholder="00/00/00" style="width:300px">
-                <label for=" floatingBday">Birthday (Optional)</label>
+                <label for="floatingBday">Birthday (Optional)</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="password" class="form-control" id="floatingPassword2" placeholder="Password"
-                    style="width:300px" required>
+                    style="width:300px" minlength="3" maxlength="25" required>
                 <label for="floatingPassword2">Password</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="password" class="form-control" id="floatingPassword3" placeholder="Password"
-                    style="width:300px" required>
+                    style="width:300px" minlength="3" maxlength="25" required>
                 <label for="floatingPassword3">Password Confirmation</label>
             </div>
-
-
-            <form action="/action_page.php">
-                <p class="labelColor">How did you hear about us:</p>
-                <input type="radio" id="social" name="about" value="Social">
-                <label for="social" class="labelColor">Social Media</label><br>
-                <input type="radio" id="google" name="about" value="Google">
-                <label for="google" class="labelColor">Google</label><br>
-                <input type="radio" id="family" name="about" value="Family">
-                <label for="family" class="labelColor">Family/Friends</label><br>
-                <input type="radio" id="other" name="about" value="Other">
-                <label for="other" class="labelColor">Other</label>
-                <br><br>
-                <div class="btnContainer d-flex justify-content-center mb-3">
-                    <button type="submit" class="btn btn-primary">Register</button>
-                </div>
-                <a href="/login/" class="link">Already have an account? Log in</a><br>
-            </form>
+            <p class="labelColor">How did you hear about us:</p>
+            <input type="radio" id="social" name="about" value="Social">
+            <label for="social" class="labelColor">Social Media</label><br>
+            <input type="radio" id="google" name="about" value="Google">
+            <label for="google" class="labelColor">Google</label><br>
+            <input type="radio" id="family" name="about" value="Family">
+            <label for="family" class="labelColor">Family/Friends</label><br>
+            <input type="radio" id="other" name="about" value="Other">
+            <label for="other" class="labelColor">Other</label>
+            <br><br>
+            <div class="btnContainer d-flex justify-content-center mb-3">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+            <a href="/login/" class="link">Already have an account? Log in</a><br>
+        </form>
     </div>
 
-    <footer class="container-fluid mt-5 bg-light">
+    <!-- The bottom footer -->
+    <footer class="container-fluid mt-3 bg-dark">
         <div class="row">
-            <p class="col-4">@copyright stuff</p>
-            <p class="col-4">Socia Media Links</p>
-            <p class="col-4">Contact Info</p>
+            <div class="col-4">
+                <h5 class="closer text-white"><i class="fa-solid fa-copyright"></i> Copyright</h5>
+                <p class="closer text-white">© 2023 DavidsSite - All Rights Reserved.</p>
+                <p class="closer text-white">Last Updated : 04/20/2023 07:28:47</p>
+            </div>
+            <div class="col-4">
+                <h5 class="closer text-white">Socia Media Links</h5>
+                <p class="closer text-white"><i class="fa-brands fa-facebook"></i><a href="#" class="bottomNav">
+                        Facebook</a></p>
+                <p class="closer text-white"><i class="fa-brands fa-twitter"></i><a href="#" class="bottomNav">
+                        Twitter</a></p>
+                <p class="closer text-white"><i class="fa-brands fa-snapchat"></i><a href="#" class="bottomNav">
+                        Snapchat</a></p>
+            </div>
+            <div class="col-4">
+                <h5 class="closer text-white">Contact Info</h5>
+                <p class="closer text-white">E-mail: davempark@gmail.com</p>
+                <p class="closer text-white">Phone: 516-660-3127</p>
+            </div>
         </div>
     </footer>
 
