@@ -109,6 +109,12 @@ table {
     visibility: hidden;
 }
 
+/* More smaller empty space holders */
+.normSpace {
+    height: 1.5rem;
+    visibility: hidden;
+}
+
 /* Footer text styling */
 .bottomNav {
     text-decoration: none;
