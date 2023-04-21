@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+footer p {
+    font-size: x-small;
+}
+
 /* The font used */
 body, header, footer {
     font-family: 'Open Sans', sans-serif;
